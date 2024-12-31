@@ -1,11 +1,11 @@
 function ColorMyPencils(color)
-  color = color or "solarized-osaka"
+  color = color or "rose-pine-moon"
   vim.cmd.colorscheme(color)
 
   vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
   vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-  vim.cmd[[set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,sm:block]]
-  vim.api.nvim_set_hl(0, "@punctuation.bracket", { fg = "#DC312E" })
+  --vim.cmd[[set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,sm:block]]
+  --vim.api.nvim_set_hl(0, "@punctuation.bracket", { fg = "#DC312E" })
 end
 
 return {
