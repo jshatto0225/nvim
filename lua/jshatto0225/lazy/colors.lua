@@ -1,5 +1,5 @@
 function ColorMyPencils(color)
-  color = color or "rose-pine-moon"
+  color = color or "gruvbox"
   vim.cmd.colorscheme(color)
 
   vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -17,15 +17,14 @@ return {
     "craftzdog/solarized-osaka.nvim",
     lazy = false,
     priority = 1000,
-    opts = {},
+    opts = {
+        italics = false
+    },
   },
   {
     "Tsuzat/NeoSolarized.nvim",
     lazy = false, -- make sure we load this during startup if it is your main colorscheme
     priority = 1000, -- make sure to load this before all the other start plugins
-    config = function()
-      vim.cmd[[set cursorline]]
-    end
   },
   {
     "navarasu/onedark.nvim",
