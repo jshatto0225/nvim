@@ -3,10 +3,10 @@ vim.opt.guicursor = ""
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+vim.opt.tabstop = 8
+vim.opt.softtabstop = 8
+vim.opt.shiftwidth = 8
+vim.opt.expandtab = false
 
 vim.opt.smartindent = true
 
@@ -31,11 +31,10 @@ vim.opt.colorcolumn = "80"
 
 vim.opt.cursorline = false
 
-vim.api.nvim_create_autocmd("VimEnter", {
-    pattern = "*",
-    command = "vsplit"
-})
-
+--vim.api.nvim_create_autocmd("VimEnter", {
+--    pattern = "*",
+--    command = "vsplit"
+--})
 
 vim.api.nvim_set_keymap('n', '<M-w>', ':wincmd w<CR>', { noremap = true, silent = true })
 
@@ -55,7 +54,7 @@ function HandleCompilation()
 
     for _, buf in ipairs(vim.api.nvim_list_bufs()) do
         local name = vim.api.nvim_buf_get_name(buf)
-        if name == Path .. "\\" .. bufname then
+        if name == Path .. "\\" .. bufname or name == Path .. "/" .. bufname then
             bufnr = buf
             buf_exists = true
             vim.api.nvim_set_current_buf(buf)
