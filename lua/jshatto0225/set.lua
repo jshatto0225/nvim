@@ -130,7 +130,7 @@ function HandleCompilation()
         end
     end
 
-    vim.fn.jobstart('build', {
+    vim.fn.jobstart('./build', {
         on_stdout = on_stdout,
         on_stderr = on_stderr,
         on_exit = on_exit,
