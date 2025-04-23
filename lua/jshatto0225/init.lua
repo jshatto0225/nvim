@@ -2,6 +2,8 @@ require("jshatto0225.set")
 require("jshatto0225.remap")
 require("jshatto0225.lazy_init")
 
+vim.hl = vim.highlight
+
 local augroup = vim.api.nvim_create_augroup
 local Group = augroup('jshatto0225', {})
 

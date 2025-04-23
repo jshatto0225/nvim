@@ -3,10 +3,10 @@ vim.opt.guicursor = ""
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
-vim.opt.tabstop = 8
-vim.opt.softtabstop = 8
-vim.opt.shiftwidth = 8
-vim.opt.expandtab = false
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
@@ -27,9 +27,9 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "81"
 
-vim.opt.cursorline = false
+vim.opt.cursorline = true
 
 --vim.api.nvim_create_autocmd("VimEnter", {
 --    pattern = "*",
@@ -129,7 +129,7 @@ function HandleCompilation()
         end
     end
 
-    vim.fn.jobstart('./build', {
+    vim.fn.jobstart('.\\build', {
         on_stdout = on_stdout,
         on_stderr = on_stderr,
         on_exit = on_exit,
